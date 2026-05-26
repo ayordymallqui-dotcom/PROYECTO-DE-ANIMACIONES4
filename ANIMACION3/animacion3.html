@@ -1,0 +1,174 @@
+<html>
+<head>
+        <title>ANIMACION CS3</title>
+            <style>
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            body{
+                background-image: url(img/fondo3.png);
+                background-size: cover;
+            }
+            .contenedor{
+                width: 400px;
+                height: 200px;
+                border: 1px solid black;
+                position: relative;/*provoca el centrado con div*/
+                margin: 0 auto; /*centrado del contenedor*/
+                margin-top: 50;
+                overflow: hidden;
+                background-image: url("./img/campo.avif");
+                background-size: cover;
+            
+            }
+            .cuadrito{
+                width: 50px; /*dimension del cuadro*/
+                height: 50px;
+                position: absolute; /*interno*/
+                left: -50px;
+                top: 50px;
+                animation: cuadrito 5s infinite;
+
+            }
+            .cuadrito2{
+                width: 50px; /*dimension del cuadro*/
+                height: 50px;
+                position: absolute; /*interno*/
+                left: -50px;
+                top: 100px;
+                animation: cuadrito2 5s infinite;
+
+            }
+            @keyframes cuadrito{
+                0%{
+                   left: -50px;
+                   top: 150px;
+                   rotate:0deg;
+                }
+                50%{
+                    left: 150;
+                    top: 0px;
+                    rotate:60deg;
+
+                }
+                100%{
+                    left: 400;
+                    top: 150px;
+                    rotate:0deg;
+                }
+
+            }
+            @keyframes cuadrito2{
+                0%{
+                    left: -25px;
+                    top: 0px;
+                    rotate:0deg;
+                }
+                50%{
+                    left: 150;
+                    top: 155px;
+                    rotate:60deg;
+
+                }
+                100%{
+                    left: 400;
+                    top: -155px;
+                    rotate:0deg;
+                }
+
+            }
+            .cuadrito img{
+                width: 50px;
+                height: 50px;
+            }
+            .cuadrito2 img{
+                width: 50px;
+                height: 50px;
+            }
+            .contenedor2 {
+                width: 400px;
+                height: 250px;
+                border: 1px solid black;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+                margin-top: 100px;
+
+                background: url("img/espacio.jpg") repeat;
+                animation: fondo 5s linear infinite;
+
+            }
+            @keyframes fondo{
+                from{
+                    background-position: 0 0;
+                }
+                to{
+                    background-position: -500px 0;
+                }
+            }
+            #cohete{
+                width: 100px;
+                position: absolute;
+                top: 80px;
+                right: -120px; /* empieza fuera */
+
+                animation: mover 4s linear infinite;
+            }
+
+            /* ANIMACIÓN DEL COHETE */
+            @keyframes mover{
+                from{
+                    left: -120px;
+                }
+                to{
+                    left: 600px;
+                }
+            }
+
+            #cohete img{
+                width: 100%;
+            }
+            h1{
+                text-align: center;
+                color: aliceblue;
+                margin:0 auto;
+                font-size: 50px;
+            }
+            #texto{
+                color: white;
+                text-align: center;
+                font-size: 25px;
+                margin-top: 10px;
+            }
+            a:hover {
+                color:rgb(255, 0, 0);
+            }
+            a {
+                color: aliceblue;
+            }
+            </style>
+</head>
+<body>
+    <a href="../index.html">VOLVER </a>
+    <h1>PROYECTO 3</h1>
+    <p id="texto">Explorando efectos, transiciones y movimientos con HTML y CSS</p>
+    <div class="contenedor">
+      <div class="cuadrito">
+         <img src="./img/abeja.webp" alt="">
+      </div>
+      <div class="cuadrito2">
+        <img src="./img/abeja2.webp" alt="">
+      </div>
+    </div>
+    <br></br>
+    <div class="contenedor2">
+        <div id="cohete">
+            <img src="img/cohete.gif">
+        </div>
+
+    </div>
+    </div>
+   </div>
+</body>
+</html>

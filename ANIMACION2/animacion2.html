@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title></title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background-image: url(img/fondo2.jpg);
+        background-size: cover;
+    }
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        background-image: url(img/mapa.jpg);
+        background-size: cover;
+        border: 1px solid black;
+        position:relative;
+        margin:0 auto; /*centrar el contenedor*/
+        overflow: hidden; /*oculta todo lo que contiene*/
+    }
+    #cuadrito{
+        width: 100px;
+        height: 100px;
+        position: absolute; /*Obligatorio para mover el div*/
+        top:105px;
+        left:-100px;
+
+        animation: cuadrito 3s infinite;
+        animation-timing-function: linear; /*define la forma de moverse*/
+    }
+    @keyframes cuadrito{
+        from{
+            left:-100px;
+        }
+        to{
+            left:500px;
+        }
+    }
+
+    #cuadrito img{
+        width: 100px;
+        height: 100px;
+    }
+    h1 {
+        text-align: center;
+        color: aliceblue;
+        margin:0 auto;
+        font-size: 50px;
+
+    }
+    #texto{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    a:hover {
+        color:rgb(255, 0, 0);
+    }
+    a {
+        color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <a href="../index.html">VOLVER </a>
+    <h1>PROYECTO 2</h1>
+    <p id="texto">Explorando efectos, transiciones y movimientos con HTML y CSS</p>
+    <br></br>
+    <div id="contenedor">
+
+        <div id="cuadrito">
+
+            <img src="img/megamanx.gif" alt="">
+
+        </div>
+
+    </div>
+</body>
+</html>
